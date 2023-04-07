@@ -1,0 +1,71 @@
+.footer {
+  padding: 0 !important;
+  margin-left: 12%;
+  margin-right: 9%;
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+  a {
+    color: $white !important;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .footer-content {
+    margin-top: 8rem !important;
+    @media (max-width: 768px) {
+      margin-top: 1rem !important;
+      margin-bottom: 2rem;
+    }
+  }
+  .circle {
+    padding-left: 14%;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  img {
+    width: 3em;
+    height: 3em;
+    opacity: 1;
+    border-radius: 50%;
+    z-index: 9999;
+  }
+  .social-icons {
+    width: 20px;
+    margin-left: 10px;
+    height: 20px;
+    padding: 0;
+    background-repeat: no-repeat;
+    vertical-align: bottom;
+    display: inline-block;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .icon-instagram {
+    background-image: url(../img/instagram.svg);
+  }
+  .icon-facebook {
+    background-image: url(../img/facebook.svg);
+  }
+  .icon-twitter {
+    background-image: url(../img/twitter.svg);
+  }
+  .icon-telegram {
+    background-image: url(../img/telegram.svg);
+    width: 19px;
+    height: 18px;
+  }
+  .icon-medium {
+    background-image: url(../img/medium.svg);
+    height: 18px;
+  }
+  .icon-slack {
+    background-image: url(../img/slack.svg);
+  }
+  .icon-linkedin {
+    background-image: url(../img/linkedin.svg);
+  }
+}
