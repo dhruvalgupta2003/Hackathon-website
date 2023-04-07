@@ -1,5 +1,5 @@
-## Landing page for ETHIndia 2018
-https://2018.ethindia.co/
+## Landing page for Hack-X-NIET 2023
+
 
 ## Installation
 - `npm install`
