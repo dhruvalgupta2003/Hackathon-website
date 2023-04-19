@@ -51,6 +51,8 @@
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/main.min.css" rel="stylesheet">
+  <!-- <link href="Hackathon-websitefooter.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body id="page-top">
@@ -74,14 +76,14 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" title="About" href="#about">ABOUT</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link js-scroll-trigger" title="Speakers" href="#speakers">SPEAKERS</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" title="Schedule" href="#schedule">SCHEDULE</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" title="Sponsors" href="#sponsors">SPONSORS</a>
+            <!-- <a class="nav-link js-scroll-trigger" title="Sponsors" href="#sponsors">SPONSORS</a> -->
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" title="faq" href="#faq">FAQ</a>
@@ -109,20 +111,24 @@
               <br>#hackathon</strong>
           </h1>
         </div>
-        <div class="col-lg-12 mt-3">
+        <div class="col-lg-12 mt-3" style="display:flex;justify-content: space-between; ">
           <p class="text-faded" style="line-height: 1.8;">Join us in breaking barriers and pushing boundaries at the first ever Hackathon event in NIET.
             <br>With the power of innovation and the spirit of community, we will pave the way for a brighter future
             <br>On May 1-2, 2023 | Greater Noida 
             <br>- let's hackX together!
           </p>
+          <!-- <img src="https://media.discordapp.net/attachments/891025496601661504/1084865351268962445/hackX.png?width=606&height=606" style="max-height: 200px; margin: -90px -70px;"/> -->
         </div>
         <div class="col-lg-12" style="margin-top: 2.5rem !important">
           <p class="text-faded">Tech Talks + Events</p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#">Register now!</a>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#">Register now!</a> <br>
+          <p style="padding: 30px 0px; font-size:1.5rem; font-weight: 400;">Important! problem statements to be out soon</p>
         </div>
       </div>
     </div>
   </header>
+  
+
 
   <section id="about">
     <div class="container">
@@ -144,7 +150,7 @@
     </div>
   </section>
 
-  <!-- <section id="speakers" class="bg-primary">
+  <section id="speakers" class="bg-primary" style="display: none;">
 
     <div class="container">
       <div class="row">
@@ -514,7 +520,7 @@
         </div>
 
       </div>
-  </section> -->
+  </section>
 
 
   <section id="schedule" class="schedule-box">
@@ -1331,7 +1337,7 @@
               </div>
             </div>
 
-            <!--<div class="card">
+            <!-- <div class="card">
               <button class="card-header collapsed" data-toggle="collapse" role="button" href="#collapse11">
                 <a class="panel-title card-title text-black">
                   <h5 class="arrow display-5">
@@ -1424,71 +1430,104 @@
       </div>
     </div>
   </section>
+  <div style="display: flex;margin-left: auto;margin-right: auto;flex-direction: column;text-align: center;">
+  
+    <p style="max-height: 30px;">This page was viewed</p>
+    <h1 id="count" style="color: rgb(95, 188, 95);"></h1>
+    <p style="max-height: 30px;">times</p>
+    <script>
+      const countEl = document.getElementById("count");
+      countvisits();
+
+      function countvisits() {
+        fetch('https://api.countapi.xyz/update/hackx/niet/?amount=1')
+          .then((res) => res.json())
+          .then((res) => {
+            countEl.innerHTML = res.value;
+          });
+      }
+      
+    </script>
+    
+    </div>
 
   <section id="venue">
     <div class="container">
       <div class="row">
         <div class="col-sm">
           <h1>Venue</h1>
-          <img src="/img/NIET-Greater-Noida.jpg" class="mlr" alt="MLR convention center">
+          <img src="/Hackathon-website/img/NIET-Greater-Noida.jpg" class="mlr" alt="MLR convention center">
           <p>Noida Institute of Engineering & Technology</p>
           <p class="text-faded mb-4">19, Knowledge Park-II, Institutional Area, Greater Noida, Uttar Pradesh, 201306</p>
           <!-- <a class="btn btn-secondary" role="button" href="https://goo.gl/maps/oapSJP8nEdr5aZSW8" target="_blank">Get Directions</a> -->
         </div>
         <div class="col-sm">
           <!-- <div id="map"></div> -->
-          <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.5524671649614!2d77.48850461488934!3d28.462904282485027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc1e055d148a1%3A0x9f5207f7f0bc8f63!2sNoida%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sus!4v1679577947549!5m2!1sen!2sus" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe style="width: 100%;"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.5524671649614!2d77.48850461488934!3d28.462904282485027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc1e055d148a1%3A0x9f5207f7f0bc8f63!2sNoida%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sus!4v1679577947549!5m2!1sen!2sus" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
       </div>
     </div>
   </section>
 
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
   <section class="footer">
+    
     <footer>
       <div class="container">
         <div class="row d-flex align-items-center">
-          <div class="col-md-6 col-lg-2 text-center text-md-left footer-content">
+          <!-- <div class="col-md-6 col-lg-2 text-center text-md-left footer-content">
             <h6 class="white-text">
               <a href="/code-of-conduct">Code of Conduct</a>
             </h6>
-          </div>
+          </div> -->
           <div class="col-lg-6 circle">
             <div id='ripple'></div>
           </div>
           <div class="col-md-6 col-lg-4 text-center text-md-right footer-content">
-            <!--Facebook-->
-            <a href="https://www.facebook.com/ethindiaco/" target="_blank" rel="noopener" title="ETHIndia Facebook">
-              <span class="social-icons icon-facebook"> </span>
-            </a>
-            <!--Twitter-->
-            <a href="https://twitter.com/ethindiaco" target="_blank" rel="noopener" title="ETHIndia Twitter">
+
+            <div >
+              <span class="social-icons icon-phone" > </span>
+              <div style="display: flex;">
+              <div ><i class="fa fa-phone" style="padding-right: 4px; color: aliceblue;" ></i></div>
+              <span style="color: white;z-index: 10">  +91 8826637343, +91 8527196812</span>
+            </div>
+          </div>
+            <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+            <!-- <a href="https://twitter.com/ethindiaco" target="_blank" rel="noopener" title="ETHIndia Twitter">
               <span class="social-icons icon-twitter"> </span>
             </a>
-            <!--Medium-->
             <a href="https://medium.com/ethindia" target="_blank" rel="noopener" title="ETHIndia Medium">
               <span class="social-icons icon-medium"> </span>
             </a>
-            <!--Linkedin +-->
             <a href="https://www.linkedin.com/company/ethindia/" target="_blank" rel="noopener" title="ETHIndia LinkedIn">
               <span class="social-icons icon-linkedin"> </span>
             </a>
-            <!--Instagram-->
             <a href="https://www.instagram.com/ethindiaco/" target="_blank" rel="noopener" title="ETHIndia Instagram">
               <span class="social-icons icon-instagram"> </span>
             </a>
-            <!-- Telegram -->
             <a href="https://t.me/ethindiaco" target="_blank" rel="noopener" title="ETHIndia Telegram">
               <span class="social-icons icon-telegram"> </span>
             </a>
-            <!-- Slack -->
             <a href="https://slack.ethindia.co/" target="_blank" rel="noopener" title="ETHIndia Slack">
               <span class="social-icons icon-slack"> </span>
-            </a>
+            </a> -->
           </div>
-          <!--Grid column-->
         </div>
-        <!--Grid row-->
+        <p style="text-align: center;color: rgb(237, 237, 242);padding: 10px;font-size: 15px;">2023 ©All Rights Reserved By @HACK-X-NIET</p>
       </div>
     </footer>
   </section>
