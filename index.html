@@ -1631,27 +1631,28 @@
         </div>
       </div>
     </div>
-  </section>
-  <div style="display: flex;margin-left: auto;margin-right: auto;flex-direction: column;text-align: center;">
+    <div style="display: flex;margin-left: auto;margin-right: auto;flex-direction: column;text-align: center;">
   
-    <p style="max-height: 30px;">This page was viewed</p>
-    <h1 id="count" style="color: rgb(95, 188, 95);"></h1>
-    <p style="max-height: 30px;">times</p>
-    <script>
-      const countEl = document.getElementById("count");
-      countvisits();
-
-      function countvisits() {
-        fetch('https://api.countapi.xyz/update/hackx/niet/?amount=1')
-          .then((res) => res.json())
-          .then((res) => {
-            countEl.innerHTML = res.value;
-          });
-      }
+      <p style="max-height: 30px;">This page was viewed</p>
+      <h1 id="count" style="color: rgb(95, 188, 95);"></h1>
+      <p style="max-height: 30px;">times</p>
+      <script>
+        const countEl = document.getElementById("count");
+        countvisits();
+  
+        function countvisits() {
+          fetch('https://api.countapi.xyz/update/hackx/niet/?amount=1')
+            .then((res) => res.json())
+            .then((res) => {
+              countEl.innerHTML = res.value;
+            });
+        }
+        
+      </script> 
       
-    </script> 
-    
-    </div>
+      </div>
+  </section>
+  
 
   <section id="venue">
     <div class="container">
